@@ -159,6 +159,7 @@
     <ClCompile Include="src\element.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\renderer.cpp" />
+    <ClCompile Include="src\bubbleSort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitattributes" />
@@ -177,6 +178,7 @@
   <ItemGroup>
     <ClInclude Include="src\container.h" />
     <ClInclude Include="src\element.h" />
+    <ClInclude Include="src\bubbleSort.h" />
     <ClInclude Include="src\renderer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

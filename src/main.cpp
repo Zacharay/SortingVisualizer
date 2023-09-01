@@ -1,12 +1,14 @@
 #include <SFML/Graphics.hpp>
 #include "container.h"
 #include "renderer.h"
+#include "bubbleSort.h"
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
+    sf::RenderWindow window(sf::VideoMode(1200, 900), "My window");
     
     Container container(100);
     renderContainer(container, window);
+    bubbleSort(container, window);
     // run the program as long as the window is open
     while (window.isOpen())
     {
