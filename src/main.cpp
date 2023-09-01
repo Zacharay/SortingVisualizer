@@ -1,8 +1,11 @@
-
 #include <SFML/Graphics.hpp>
+#include "container.h"
+
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
+
+    Container container(10);
 
     // run the program as long as the window is open
     while (window.isOpen())
