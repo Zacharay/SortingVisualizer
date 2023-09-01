@@ -4,8 +4,11 @@
 
 class Container {
 private:
-	int numOfElements;
+	unsigned int numOfElements;
 	std::vector<Element*> elements;
 public:
-	Container(const int numberOfElements);
+	Container(const unsigned int numberOfElements);
+	const unsigned int getNumOfElements()const;
+	const std::vector<Element*>& getElements() const;
+	std::vector<Element*>& getElements();
 };

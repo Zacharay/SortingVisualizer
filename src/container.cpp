@@ -1,7 +1,7 @@
 #include "container.h"
 #include <random>
 #include <iostream>
-Container::Container(const int numberOfElements)
+Container::Container(const unsigned int numberOfElements)
 {
 	numOfElements = numberOfElements;
 
@@ -16,4 +16,19 @@ Container::Container(const int numberOfElements)
 		int randomNum = distribution(gen);
 		elements[i] = new Element(randomNum);
 	}
+}
+
+const unsigned int Container::getNumOfElements() const
+{
+	return numOfElements;
+}
+
+const std::vector<Element*>& Container::getElements() const
+{
+	return elements;
+}
+
+std::vector<Element*>& Container::getElements()
+{
+	return elements;
 }

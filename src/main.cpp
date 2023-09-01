@@ -1,12 +1,12 @@
 #include <SFML/Graphics.hpp>
 #include "container.h"
-
+#include "renderer.h"
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
-
-    Container container(10);
-
+    
+    Container container(100);
+    renderContainer(container, window);
     // run the program as long as the window is open
     while (window.isOpen())
     {
@@ -18,13 +18,6 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        window.clear();
-        sf::RectangleShape rect;
-        rect.setSize(sf::Vector2f(200, 100));
-        rect.setPosition(300, 250);
-        rect.setFillColor(sf::Color::Blue);
-        window.draw(rect);
-        window.display();
     }
 
     return 0;
